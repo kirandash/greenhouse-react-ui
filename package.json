@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React UI component library built with Tailwind CSS",
   "main": "dist/index.js",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/greenhouse-react-ui"
+    "url": "https://github.com/kirandash/greenhouse-react-ui"
   },
   "keywords": [
     "react"

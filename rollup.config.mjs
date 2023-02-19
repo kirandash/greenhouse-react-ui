@@ -10,12 +10,12 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: "dist/index.ts",
+        file: "dist/index.js",
         format: "cjs",
         sourcemap: true,
       },
       {
-        file: "dist/index.esm.ts",
+        file: "dist/index.esm.js",
         format: "esm",
         exports: "named",
         sourcemap: true,
