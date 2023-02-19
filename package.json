@@ -4,6 +4,9 @@
   "description": "React UI component library built with Tailwind CSS",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
