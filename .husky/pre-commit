@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# TODO: Fix lint conflicts between prettier and eslint
-# npm run lint
+npm run lint

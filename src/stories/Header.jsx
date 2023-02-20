@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -34,6 +35,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 			<div>
 				{user ? (
 					<>
+					
 						<span className="welcome">
 							Welcome, <b>{user.name}</b>!
 						</span>

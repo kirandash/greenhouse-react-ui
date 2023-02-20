@@ -1,10 +1,10 @@
 # Greenhouse React UI
 
-The component library for fast and accessible development of gorgeous
-interfaces.
+The react component library with Tailwind and a gorgeous design system to help
+you build gorgeous react projects.
 
 <p>
-  <a href="https://codecov.io/gh/kirandash/greenhouse-react-ui"><img src="https://codecov.io/gh/kirandash/greenhouse-react-ui/branch/main/graph/badge.svg?token=H26ECXXPKW"/></a>
+  <a href="https://codecov.io/gh/kirandash/greenhouse-react-ui"><img src="https://codecov.io/gh/kirandash/greenhouse-react-ui/branch/main/graph/badge.svg?token=H26ECXXPKW" alt="Codecov" /></a>
   <img src="https://github.com/kirandash/greenhouse-react-ui/workflows/Build/badge.svg" alt="Build" />
   <a href="https://www.npmjs.com/package/greenhouse-react-ui"><img src="https://img.shields.io/npm/v/greenhouse-react-ui" alt="npm" /></a>
   <a href="https://github.com/kirandash/greenhouse-react-ui/blob/master/LICENSE"><img src="https://img.shields.io/github/license/kirandash/greenhouse-react-ui" alt="MIT License" /></a>
@@ -77,6 +77,6 @@ export default App
 It will start a local server at `localhost:6006` with all components rendered.
 
 `git commit` will guide you through some short questions and guarantee that you
-commit message is standardized.
+commit message is standardized. Also it will trigger a lint check
 
 `git push` will trigger prettier format check, linting, audit and build.
