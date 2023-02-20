@@ -4,10 +4,7 @@ The component library for fast and accessible development of gorgeous
 interfaces.
 
 <p>
-https://app.codecov.io/gh/kirandash/greenhouse-react-ui
-  <a href="https://codecov.io/gh/kirandash/greenhouse-react-ui" > 
- <img src="https://codecov.io/gh/kirandash/greenhouse-react-ui/branch/main/graph/badge.svg?token=H26ECXXPKW"/> 
- </a>
+  <a href="https://codecov.io/gh/kirandash/greenhouse-react-ui"><img src="https://codecov.io/gh/kirandash/greenhouse-react-ui/branch/main/graph/badge.svg?token=H26ECXXPKW"/></a>
   <img src="https://github.com/kirandash/greenhouse-react-ui/workflows/Build/badge.svg" alt="Build" />
   <a href="https://www.npmjs.com/package/greenhouse-react-ui"><img src="https://img.shields.io/npm/v/greenhouse-react-ui" alt="npm" /></a>
   <a href="https://github.com/kirandash/greenhouse-react-ui/blob/master/LICENSE"><img src="https://img.shields.io/github/license/kirandash/greenhouse-react-ui" alt="MIT License" /></a>
