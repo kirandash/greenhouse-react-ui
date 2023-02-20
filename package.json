@@ -21,7 +21,7 @@
 		"format": "npm run prettier -- --write",
 		"check-format": "npm run prettier -- --list-different",
 		"audit": "npm audit --audit-level=high --omit=dev",
-		"validate": "npm-run-all check-format audit build-lib,"
+		"validate": "npm-run-all check-format audit build-lib"
 	},
 	"repository": {
 		"type": "git",
