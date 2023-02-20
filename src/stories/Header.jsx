@@ -35,7 +35,6 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
 			<div>
 				{user ? (
 					<>
-					
 						<span className="welcome">
 							Welcome, <b>{user.name}</b>!
 						</span>
