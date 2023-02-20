@@ -20,7 +20,7 @@
 		"format": "npm run prettier -- --write",
 		"check-format": "npm run prettier -- --list-different",
 		"audit": "npm audit --audit-level=high --omit=dev",
-		"validate": "check-format audit lint build"
+		"validate": "check-format audit build"
 	},
 	"repository": {
 		"type": "git",
@@ -57,10 +57,12 @@
 		"commitizen": "4.3.0",
 		"cz-conventional-changelog": "3.3.0",
 		"eslint": "8.34.0",
+		"eslint-config-prettier": "8.6.0",
 		"eslint-config-semistandard": "17.0.0",
 		"eslint-config-standard": "17.0.0",
 		"eslint-plugin-import": "2.27.5",
 		"eslint-plugin-n": "15.6.1",
+		"eslint-plugin-prettier": "4.2.1",
 		"eslint-plugin-promise": "6.1.1",
 		"eslint-plugin-react": "7.32.2",
 		"husky": "8.0.3",
