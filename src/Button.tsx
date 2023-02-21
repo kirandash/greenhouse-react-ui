@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, forwardRef } from 'react'
 import clsx from 'clsx'
 import { warn } from './utils/warning'
+import theme from './themes/default'
 
 // TODO: Tag validation - button, anchor
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -15,27 +16,24 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 	// Styles
-	const baseStyle =
-		'inline-flex items-center justify-center leading-5 transition-colors duration-150 font-medium focus:outline-none'
-	const blockStyle = 'w-full'
+	const baseStyle = theme.button.base
+	const blockStyle = theme.button.block
 	const sizeStyles = {
-		large: 'px-7 py-3.5 rounded text-base',
-		medium: 'px-6 py-3 rounded text-sm',
-		small: 'px-3 py-1 rounded text-sm',
+		large: theme.button.size.large,
+		medium: theme.button.size.medium,
+		small: theme.button.size.small,
 	}
 	const layoutStyles = {
-		primary: 'border border-green-500 bg-green-500 text-white',
-		outline: 'border border-green-500 text-green-500',
+		primary: theme.button.layout.primary,
+		outline: theme.button.layout.outline,
 	}
 	const activeStyles = {
-		primary:
-			'active:bg-green-600 hover:bg-green-600 hover:border-green-600 focus:shadow-outline-green',
-		outline:
-			'active:bg-transparent hover:bg-green-100 hover:border-green-100 focus:border-green-100 active:text-green-500 focus:shadow-outline-green',
+		primary: theme.button.active.primary,
+		outline: theme.button.active.outline,
 	}
 	const disabledStyles = {
-		primary: 'opacity-50 cursor-not-allowed',
-		outline: 'opacity-50 cursor-not-allowed bg-gray-300',
+		primary: theme.button.disabled.primary,
+		outline: theme.button.disabled.outline,
 	}
 
 	const {
