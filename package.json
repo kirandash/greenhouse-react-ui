@@ -9,6 +9,7 @@
 	],
 	"scripts": {
 		"test": "jest",
+		"test:watch": "jest --watch",
 		"test:coverage": "jest --watch=false --coverage",
 		"prestorybook": "npm run build:tailwind",
 		"storybook": "start-storybook -p 6006",
