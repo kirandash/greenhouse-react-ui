@@ -10,6 +10,7 @@ type ButtonProps = {
 	block?: boolean
 	children: React.ReactNode
 	className?: string
+	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
@@ -45,6 +46,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 		block = false,
 		children,
 		className,
+		onClick,
 		...other
 	} = props
 
@@ -61,7 +63,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 	)
 
 	return (
-		<Component ref={ref} className={cls} disabled={disabled} {...other}>
+		<Component
+			ref={ref}
+			className={cls}
+			disabled={disabled}
+			{...other}
+			onClick={onClick}
+		>
 			{' '}
 			{children}
 		</Component>
