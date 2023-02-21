@@ -1,7 +1,8 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"node": true
 	},
 	"extends": [
 		"eslint:recommended",
@@ -17,7 +18,10 @@
 		"sourceType": "module"
 	},
 	"plugins": ["react", "@typescript-eslint", "prettier", "jsx-a11y"],
-	"rules": { "react/react-in-jsx-scope": "off" },
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"react/display-name": "off"
+	},
 	"settings": {
 		"react": {
 			"version": "detect"

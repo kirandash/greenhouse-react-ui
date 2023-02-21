@@ -37,20 +37,20 @@ module.exports = greenhouse({
 })
 ```
 
-Then place `Windmill` at the root of your project (the order doesn't matter, as
-long as your application is inside).
+Then place `GreenHouse` at the root of your project (the order doesn't matter,
+as long as your application is inside).
 
 ```js
 // index.js
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { Windmill } from 'greenhouse-react-ui'
+import { GreenHouse } from 'greenhouse-react-ui'
 
 ReactDOM.render(
-	<Greenhouse>
+	<GreenHouse>
 		<App />
-	</Greenhouse>,
+	</GreenHouse>,
 	document.getElementById('root'),
 )
 ```
