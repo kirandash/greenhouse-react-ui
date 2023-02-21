@@ -2,6 +2,7 @@ import React from 'react'
 
 import Button from '../Button'
 
+// TODO: Convert to TypeScript
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
 	title: 'Example/Button',

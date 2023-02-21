@@ -1,8 +1,9 @@
-import { forwardRef } from 'react'
+import { ButtonHTMLAttributes, forwardRef } from 'react'
 import clsx from 'clsx'
 import { warn } from './utils/warning'
 
-type ButtonProps = {
+// TODO: Tag validation - button, anchor
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	tag?: 'button'
 	size?: 'small' | 'medium' | 'large'
 	layout?: 'primary' | 'outline'
@@ -10,7 +11,6 @@ type ButtonProps = {
 	block?: boolean
 	children: React.ReactNode
 	className?: string
-	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
@@ -46,7 +46,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 		block = false,
 		children,
 		className,
-		onClick,
 		...other
 	} = props
 
@@ -63,13 +62,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 	)
 
 	return (
-		<Component
-			ref={ref}
-			className={cls}
-			disabled={disabled}
-			{...other}
-			onClick={onClick}
-		>
+		<Component ref={ref} className={cls} disabled={disabled} {...other}>
 			{' '}
 			{children}
 		</Component>
