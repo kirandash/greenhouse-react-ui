@@ -15,25 +15,26 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+	const { button: buttonTheme } = theme
 	// Styles
-	const baseStyle = theme.button.base
-	const blockStyle = theme.button.block
+	const baseStyle = buttonTheme.base
+	const blockStyle = buttonTheme.block
 	const sizeStyles = {
-		large: theme.button.size.large,
-		medium: theme.button.size.medium,
-		small: theme.button.size.small,
+		large: buttonTheme.size.large,
+		medium: buttonTheme.size.medium,
+		small: buttonTheme.size.small,
 	}
 	const layoutStyles = {
-		primary: theme.button.layout.primary,
-		outline: theme.button.layout.outline,
+		primary: buttonTheme.layout.primary,
+		outline: buttonTheme.layout.outline,
 	}
 	const activeStyles = {
-		primary: theme.button.active.primary,
-		outline: theme.button.active.outline,
+		primary: buttonTheme.active.primary,
+		outline: buttonTheme.active.outline,
 	}
 	const disabledStyles = {
-		primary: theme.button.disabled.primary,
-		outline: theme.button.disabled.outline,
+		primary: buttonTheme.disabled.primary,
+		outline: buttonTheme.disabled.outline,
 	}
 
 	const {

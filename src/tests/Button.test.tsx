@@ -2,6 +2,9 @@ import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Button from '../Button'
+import theme from '../themes/default'
+
+const { button: buttonTheme } = theme
 
 describe('Base Button', () => {
 	it('renders correctly', () => {
@@ -15,24 +18,22 @@ describe('Base Button', () => {
 	it('should contain the base class', () => {
 		render(<Button>Click me</Button>)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass(
-			'inline-flex items-center justify-center leading-5 transition-colors duration-150 font-medium focus:outline-none',
-		)
+		expect(button).toHaveClass(buttonTheme.base)
 	})
 
 	it('should render primary medium button by default', () => {
 		render(<Button>Click me</Button>)
 		const button = screen.getByRole('button')
 		expect(button).toHaveClass(
-			'border border-green-500 bg-green-500 text-white',
-			'px-6 py-3 rounded text-sm',
+			buttonTheme.layout.primary,
+			buttonTheme.size.medium,
 		)
 	})
 
 	it('renders a block button when "block" prop is set', () => {
 		render(<Button block>Click me</Button>)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass('w-full')
+		expect(button).toHaveClass(buttonTheme.block)
 	})
 
 	it('calls a function when clicked', () => {
@@ -61,17 +62,17 @@ describe('Sizes', () => {
 	it('renders a large button', () => {
 		render(<Button size="large">Click me</Button>)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass('text-base', 'px-7', 'py-3.5', 'rounded')
+		expect(button).toHaveClass(buttonTheme.size.large)
 	})
 	it('renders a medium button', () => {
 		render(<Button size="medium">Click me</Button>)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass('text-sm', 'px-6', 'py-3', 'rounded')
+		expect(button).toHaveClass(buttonTheme.size.medium)
 	})
 	it('renders a small button', () => {
 		render(<Button size="small">Click me</Button>)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass('text-sm', 'px-3', 'py-1', 'rounded')
+		expect(button).toHaveClass(buttonTheme.size.small)
 	})
 })
 
@@ -79,9 +80,7 @@ describe('Primary', () => {
 	it('should contain primary bases classes', () => {
 		render(<Button layout="primary">Click me</Button>)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass(
-			'border border-green-500 bg-green-500 text-white',
-		)
+		expect(button).toHaveClass(buttonTheme.layout.primary)
 	})
 	it('should contain primary hover classes', () => {
 		render(<Button layout="primary">Click me</Button>)
@@ -108,7 +107,7 @@ describe('Primary', () => {
 			</Button>,
 		)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass('opacity-50 cursor-not-allowed')
+		expect(button).toHaveClass(buttonTheme.disabled.primary)
 	})
 	it('should not contain primary active class when disabled', () => {
 		render(
@@ -117,9 +116,7 @@ describe('Primary', () => {
 			</Button>,
 		)
 		const button = screen.getByRole('button')
-		expect(button).not.toHaveClass(
-			'active:bg-green-600 hover:bg-green-600 hover:border-green-600 focus:shadow-outline-green',
-		)
+		expect(button).not.toHaveClass(buttonTheme.active.primary)
 	})
 })
 
@@ -127,7 +124,7 @@ describe('Outline', () => {
 	it('should contain outline bases classes', () => {
 		render(<Button layout="outline">Click me</Button>)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass('border border-green-500 text-green-500')
+		expect(button).toHaveClass(buttonTheme.layout.outline)
 	})
 	it('should contain outline hover classes', () => {
 		render(<Button layout="outline">Click me</Button>)
@@ -154,7 +151,7 @@ describe('Outline', () => {
 			</Button>,
 		)
 		const button = screen.getByRole('button')
-		expect(button).toHaveClass('opacity-50 cursor-not-allowed bg-gray-300')
+		expect(button).toHaveClass(buttonTheme.disabled.outline)
 	})
 	it('should not contain outline active class when disabled', () => {
 		render(
@@ -163,8 +160,6 @@ describe('Outline', () => {
 			</Button>,
 		)
 		const button = screen.getByRole('button')
-		expect(button).not.toHaveClass(
-			'active:bg-transparent hover:bg-green-100 hover:border-green-100 focus:border-green-100 active:text-green-500 focus:shadow-outline-green',
-		)
+		expect(button).not.toHaveClass(buttonTheme.active.outline)
 	})
 })
