@@ -1,7 +1,8 @@
-import { ButtonHTMLAttributes, forwardRef } from 'react'
+import { ButtonHTMLAttributes, forwardRef, useContext } from 'react'
 import clsx from 'clsx'
 import { warn } from './utils/warning'
-import theme from './themes/default'
+import defaultTheme from './themes/default'
+import { ThemeContext } from './context/ThemeContext'
 
 // TODO: Tag validation - button, anchor
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -15,6 +16,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+	const theme = useContext(ThemeContext) || defaultTheme
 	const { button: buttonTheme } = theme
 	// Styles
 	const baseStyle = buttonTheme.base

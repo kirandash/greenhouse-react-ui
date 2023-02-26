@@ -1,3 +1,4 @@
+// TODO: Add type for theme
 export default {
 	button: {
 		base: 'inline-flex items-center justify-center leading-5 transition-colors duration-150 font-medium focus:outline-none',
