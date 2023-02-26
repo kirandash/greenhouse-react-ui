@@ -1,36 +1,26 @@
 import React from 'react'
 
-import Button from '../Button'
+import HelperText from '../HelperText'
 
 // TODO: Convert to TypeScript
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Components/Button',
-	component: Button,
+	title: 'Components/HelperText',
+	component: HelperText,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
 }
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = args => <Button {...args}>Button</Button>
+const Template = args => <HelperText {...args}>HelperText</HelperText>
 
-export const Primary = Template.bind({})
+export const Base = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+Base.args = {
 	className: 'test-class-name',
 }
 
-export const PrimaryOutline = Template.bind({})
-PrimaryOutline.args = {
-	layout: 'outline',
-}
-
-export const Large = Template.bind({})
-Large.args = {
-	size: 'large',
-}
-
-export const Small = Template.bind({})
-Small.args = {
-	size: 'small',
+export const Invalid = Template.bind({})
+Invalid.args = {
+	valid: false,
 }

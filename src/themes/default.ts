@@ -23,4 +23,9 @@ export default {
 			outline: 'opacity-50 cursor-not-allowed bg-gray-300',
 		},
 	},
+	helperText: {
+		base: 'text-xs tracking-wide font-normal',
+		valid: 'hidden',
+		invalid: 'text-red',
+	},
 }
