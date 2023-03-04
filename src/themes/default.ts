@@ -33,4 +33,8 @@ export default {
 		disabled: 'cursor-not-allowed opacity-50 bg-black-10',
 		invalid: 'border-red',
 	},
+	label: {
+		base: 'block text-xs font-medium tracking-wide text-black-80',
+		disabled: 'cursor-not-allowed opacity-50',
+	},
 }
