@@ -38,7 +38,9 @@ const greenHouseConfig = {
 		'node_modules/greenhouse-react-ui/dist/index.js',
 	],
 	theme: {
-		colors,
+		extend: {
+			colors: colors,
+		},
 	},
 }
 
