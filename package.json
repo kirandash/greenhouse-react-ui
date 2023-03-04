@@ -1,6 +1,6 @@
 {
 	"name": "greenhouse-react-ui",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"description": "React UI component library built with Tailwind CSS",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
@@ -16,8 +16,8 @@
 		"build-storybook": "build-storybook",
 		"build:tailwind": "tailwindcss build -i style/tailwind.css -o style/output.css -c style/tailwind.config.js",
 		"build:tailwind:watch": "tailwindcss build -i style/tailwind.css -o style/output.css -c style/tailwind.config.js --watch",
-		"build:theme": "babel src/themes/default.ts --out-file lib/defaultTheme.js",
-		"prebuild-lib": "rimraf dist lib && npm run build:theme",
+		"build:theme": "babel src/themes/default.ts --out-file dist/defaultTheme.js",
+		"prebuild-lib": "rimraf dist && npm run build:theme",
 		"build-lib": "rollup -c",
 		"prepare": "husky install",
 		"commit": "cz",
