@@ -1,5 +1,5 @@
 import React from 'react'
-import { deepMerge } from './utils/deepMerge'
+import deepMerge from 'deepmerge'
 import defaultTheme from './themes/default'
 import { ThemeContext } from './context/ThemeContext'
 
@@ -10,7 +10,7 @@ const GreenHouse = ({
 	children: React.ReactNode
 	theme?: object
 }) => {
-	const mergedTheme = deepMerge(defaultTheme, theme)
+	const mergedTheme = deepMerge(defaultTheme, theme || {})
 	return (
 		<ThemeContext.Provider value={mergedTheme}>
 			{children}

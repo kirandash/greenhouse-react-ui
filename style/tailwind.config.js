@@ -1,40 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-	content: ['./src/**/*.{tsx,jsx,ts,js}'],
+import greenhouse from '../config'
+
+module.exports = greenhouse({
+	content: [],
 	theme: {
-		extend: {
-			colors: {
-				primary: {
-					DEFAULT: '#6EA83D',
-					shade70: '#D6E7B0',
-					shade60: '#C5DD8E',
-					shade50: '#B4D36D',
-					shade40: '#A9CD57',
-					shade35: '#9CC451',
-					shade30: '#93BE4C',
-					shade25: '#8BB949',
-					shade20: '#82B344',
-					shade10: '#79AD40',
-					tint10: '#67A137',
-					tint20: '#5F9C34',
-					tint30: '#55952F',
-					tint40: '#498D29',
-				},
-				red: '#D53232',
-				black: {
-					10: '#E7E7E7',
-					20: '#CFCFCF',
-					30: '#B7B7B7',
-					40: '#9E9E9E',
-					50: '#858585',
-					60: '#6E6E6E',
-					70: '#565656',
-					80: '#3D3D3D',
-					90: '#252525',
-					100: '#0D0D0D',
-				},
-			},
-		},
+		extend: {},
 	},
 	plugins: [],
-}
+})
