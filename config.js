@@ -1,4 +1,5 @@
-import deepmerge from 'deepmerge'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const deepMerge = require('deepmerge')
 
 const colors = {
 	primary: {
@@ -54,4 +55,4 @@ function wrapper(tailwindConfig) {
 	return merged
 }
 
-export default wrapper
+module.exports = wrapper

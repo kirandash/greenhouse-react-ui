@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import greenhouse from '../config'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const greenhouse = require('greenhouse-react-ui/config')
 
 module.exports = greenhouse({
 	content: [],
