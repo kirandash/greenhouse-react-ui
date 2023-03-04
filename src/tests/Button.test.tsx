@@ -86,7 +86,9 @@ describe('Primary', () => {
 		render(<Button layout="primary">Click me</Button>)
 		const button = screen.getByRole('button')
 		userEvent.hover(button)
-		expect(button).toHaveClass('hover:bg-green-600 hover:border-green-600')
+		expect(button).toHaveClass(
+			'hover:bg-primary-shade25 hover:border-primary-shade25',
+		)
 	})
 	it('should contain primary focus classes', () => {
 		render(<Button layout="primary">Click me</Button>)
@@ -98,7 +100,7 @@ describe('Primary', () => {
 		render(<Button layout="primary">Click me</Button>)
 		const button = screen.getByRole('button')
 		userEvent.click(button)
-		expect(button).toHaveClass('active:bg-green-600')
+		expect(button).toHaveClass('active:bg-primary-shade25')
 	})
 	it('should contain primary disabled classes', () => {
 		render(
@@ -130,7 +132,9 @@ describe('Outline', () => {
 		render(<Button layout="outline">Click me</Button>)
 		const button = screen.getByRole('button')
 		userEvent.hover(button)
-		expect(button).toHaveClass('hover:bg-green-100 hover:border-green-100')
+		expect(button).toHaveClass(
+			'hover:bg-primary-shade70 hover:border-primary-shade70',
+		)
 	})
 	it('should contain outline focus classes', () => {
 		render(<Button layout="outline">Click me</Button>)
@@ -142,7 +146,7 @@ describe('Outline', () => {
 		render(<Button layout="outline">Click me</Button>)
 		const button = screen.getByRole('button')
 		userEvent.click(button)
-		expect(button).toHaveClass('active:bg-transparent  active:text-green-500')
+		expect(button).toHaveClass('active:bg-transparent  active:text-primary')
 	})
 	it('should contain outline disabled classes', () => {
 		render(

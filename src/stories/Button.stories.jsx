@@ -34,3 +34,8 @@ export const Small = Template.bind({})
 Small.args = {
 	size: 'small',
 }
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+	disabled: true,
+}

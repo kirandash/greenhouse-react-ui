@@ -68,6 +68,7 @@
 		"@typescript-eslint/parser": "5.53.0",
 		"babel-jest": "29.4.3",
 		"babel-loader": "8.3.0",
+		"clsx": "1.2.1",
 		"codecov": "3.8.3",
 		"commitizen": "4.3.0",
 		"cz-conventional-changelog": "3.3.0",

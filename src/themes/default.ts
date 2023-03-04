@@ -9,14 +9,14 @@ export default {
 			small: 'px-3 py-1 rounded text-sm',
 		},
 		layout: {
-			primary: 'border border-green-500 bg-green-500 text-white',
-			outline: 'border border-green-500 text-green-500',
+			primary: 'border border-primary bg-primary text-white',
+			outline: 'border border-primary text-primary',
 		},
 		active: {
 			primary:
-				'active:bg-green-600 hover:bg-green-600 hover:border-green-600 focus:shadow-outline-green',
+				'active:bg-primary-shade25 hover:bg-primary-shade25 hover:border-primary-shade25 focus:shadow-outline-green',
 			outline:
-				'active:bg-transparent hover:bg-green-100 hover:border-green-100 focus:border-green-100 active:text-green-500 focus:shadow-outline-green',
+				'active:bg-transparent hover:bg-primary-shade70 hover:border-primary-shade70 focus:border-primary-shade70 active:text-primary focus:shadow-outline-green',
 		},
 		disabled: {
 			primary: 'opacity-50 cursor-not-allowed',
@@ -27,5 +27,10 @@ export default {
 		base: 'text-xs tracking-wide font-normal',
 		valid: 'hidden',
 		invalid: 'text-red',
+	},
+	input: {
+		base: 'block w-full text-xs px-3 py-4 focus:outline-none rounded border border-black-20 text-black-80 font-semibold tracking-wide',
+		disabled: 'cursor-not-allowed opacity-50 bg-black-10',
+		invalid: 'border-red',
 	},
 }
