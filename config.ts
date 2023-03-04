@@ -33,17 +33,24 @@ const colors = {
 }
 
 const greenhouseConfig = {
-	content: ['node_modules/greenhouse-react-ui/dist/index.js'],
+	content: ['./node_modules/greenhouse-react-ui/**/*.{ts,tsx,jsx,js}'],
 	theme: {
-		extend: {
-			colors,
-		},
+		colors,
 	},
+}
+
+function arrayMergeFn(destinationArray, sourceArray) {
+	return destinationArray.concat(sourceArray).reduce((acc, cur) => {
+		if (acc.includes(cur)) return acc
+		return [...acc, cur]
+	}, [])
 }
 
 function wrapper(tailwindConfig) {
 	const greenhouse = greenhouseConfig
-	const merged = deepmerge(greenhouse, tailwindConfig)
+	const merged = deepmerge(greenhouse, tailwindConfig, {
+		arrayMerge: arrayMergeFn,
+	})
 	return merged
 }
 
