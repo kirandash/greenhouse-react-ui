@@ -24,7 +24,7 @@ export default {
 		},
 	},
 	helperText: {
-		base: 'text-xs tracking-wide font-normal',
+		base: 'text-xs tracking-wide font-normal block',
 		valid: 'hidden',
 		invalid: 'text-red',
 	},
