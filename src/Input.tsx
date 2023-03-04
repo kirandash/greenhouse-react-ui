@@ -1,9 +1,9 @@
 import clsx from 'clsx'
-import { forwardRef, useContext } from 'react'
+import { forwardRef, InputHTMLAttributes, useContext } from 'react'
 import { ThemeContext } from './context/ThemeContext'
 import defaultTheme from './themes/default'
 
-type InputProps = {
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 	type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url'
 	invalid?: boolean
 	className?: string

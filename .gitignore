@@ -4,3 +4,5 @@ style/output.css
 
 coverage
 storybook-static
+
+.vscode/

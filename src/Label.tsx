@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import { ThemeContext } from './context/ThemeContext'
-import { forwardRef, useContext } from 'react'
+import { forwardRef, LabelHTMLAttributes, useContext } from 'react'
 
-type LabelProps = {
+type LabelProps = LabelHTMLAttributes<HTMLLabelElement> & {
 	children: React.ReactNode
 	disabled?: boolean
 	className?: string
