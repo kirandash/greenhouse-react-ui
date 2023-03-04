@@ -34,7 +34,7 @@ const colors = {
 
 const greenHouseConfig = {
 	content: [
-		'node_modules/greenhouse-react-ui/lib/defaultTheme.js',
+		'node_modules/greenhouse-react-ui/dist/defaultTheme.js',
 		'node_modules/greenhouse-react-ui/dist/index.js',
 	],
 	theme: {
