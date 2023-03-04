@@ -32,4 +32,13 @@ describe('GreenHouse context', () => {
 		expect(screen.getByText('Primary')).toHaveClass(expected)
 		expect(screen.getByText('Primary')).not.toHaveClass(buttonTheme.base)
 	})
+
+	it('should load with no theme', () => {
+		render(
+			<GreenHouse>
+				<Button>Primary</Button>
+			</GreenHouse>,
+		)
+		expect(screen.getByText('Primary')).toHaveClass(buttonTheme.base)
+	})
 })

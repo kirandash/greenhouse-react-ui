@@ -8,7 +8,7 @@ const GreenHouse = ({
 	theme,
 }: {
 	children: React.ReactNode
-	theme: any
+	theme?: object
 }) => {
 	const mergedTheme = deepMerge(defaultTheme, theme)
 	return (
