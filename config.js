@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const deepMerge = require('deepmerge')
 
 const colors = {
@@ -33,8 +32,11 @@ const colors = {
 	},
 }
 
-const greenhouseConfig = {
-	content: ['./node_modules/greenhouse-react-ui/**/*.{ts,tsx,jsx,js}'],
+const greenHouseConfig = {
+	content: [
+		'node_modules/greenhouse-react-ui/lib/defaultTheme.js',
+		'node_modules/greenhouse-react-ui/dist/index.js',
+	],
 	theme: {
 		colors,
 	},
@@ -48,11 +50,9 @@ function arrayMergeFn(destinationArray, sourceArray) {
 }
 
 function wrapper(tailwindConfig) {
-	const greenhouse = greenhouseConfig
-	const merged = deepmerge(greenhouse, tailwindConfig, {
+	return deepMerge(tailwindConfig, greenHouseConfig, {
 		arrayMerge: arrayMergeFn,
 	})
-	return merged
 }
 
 module.exports = wrapper
