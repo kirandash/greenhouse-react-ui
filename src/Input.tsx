@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import { forwardRef, InputHTMLAttributes, useContext } from 'react'
 import { ThemeContext } from './context/ThemeContext'
-import defaultTheme from './themes/default'
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 	type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url'
@@ -13,7 +12,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 // TODO: Add Clear Button and Password Toggle
 const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 	const { className, invalid, type = 'text', disabled, ...other } = props
-	const { input } = useContext(ThemeContext) || defaultTheme
+	const { input } = useContext(ThemeContext)
 
 	const baseStyle = input.base
 	const invalidStyle = input.invalid

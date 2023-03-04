@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes, forwardRef, useContext } from 'react'
 import clsx from 'clsx'
 import { warn } from './utils/warning'
-import defaultTheme from './themes/default'
 import { ThemeContext } from './context/ThemeContext'
 
 // TODO: Tag validation - button, anchor
@@ -16,7 +15,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-	const theme = useContext(ThemeContext) || defaultTheme
+	const theme = useContext(ThemeContext)
 	const { button: buttonTheme } = theme
 	// Styles
 	const baseStyle = buttonTheme.base
@@ -64,7 +63,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 
 	return (
 		<Component ref={ref} className={cls} disabled={disabled} {...other}>
-			{' '}
 			{children}
 		</Component>
 	)

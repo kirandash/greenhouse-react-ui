@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import { useContext } from 'react'
 import { ThemeContext } from './context/ThemeContext'
-import defaultTheme from './themes/default'
 import { warn } from './utils/warning'
 
 type HelperTextProps = {
@@ -13,7 +12,7 @@ type HelperTextProps = {
 const HelperText = ({ children, valid, className }: HelperTextProps) => {
 	warn(!children, 'Button', 'you must pass a children to Button')
 
-	const { helperText } = useContext(ThemeContext) || defaultTheme
+	const { helperText } = useContext(ThemeContext)
 
 	const baseStyle = helperText.base
 	const validStyle = helperText.valid
