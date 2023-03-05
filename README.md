@@ -1,7 +1,7 @@
 # Greenhouse React UI
 
 The react component library with Tailwind and a gorgeous design system to help
-you build gorgeous react projects.
+you build awesome react projects.
 
 <p>
   <a href="https://codecov.io/gh/kirandash/greenhouse-react-ui"><img src="https://codecov.io/gh/kirandash/greenhouse-react-ui/branch/main/graph/badge.svg?token=H26ECXXPKW" alt="Codecov" /></a>
