@@ -38,7 +38,7 @@ export default {
 		disabled: 'cursor-not-allowed opacity-50',
 	},
 	alert: {
-		base: 'p-[18px] pl-5 relative text-white text-sm rounded-lg leading-5 max-w-[343px] flex gap-2.5',
+		base: 'p-[18px] pl-5 text-white text-sm rounded-lg leading-5 max-w-[343px] flex gap-2.5',
 		success: 'bg-primary-tint40',
 		error: 'bg-red',
 	},
