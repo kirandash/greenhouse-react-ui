@@ -6,3 +6,5 @@ coverage
 storybook-static
 
 .vscode/
+
+.DS_Store
