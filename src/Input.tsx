@@ -69,12 +69,17 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 				onChange={e => setValue(e.target.value)}
 			/>
 			{type !== 'password' && !!value && (
-				<button onClick={clearInput} className="absolute top-[18px] right-4">
+				<button
+					type="button"
+					onClick={clearInput}
+					className="absolute top-[18px] right-4"
+				>
 					<img src={closeIcon} alt="close" />
 				</button>
 			)}
 			{type === 'password' && !!value && (
 				<button
+					type="button"
 					onClick={togglePassword}
 					className="absolute top-[18px] right-4"
 				>

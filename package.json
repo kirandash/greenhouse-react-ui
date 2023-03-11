@@ -1,6 +1,6 @@
 {
 	"name": "greenhouse-react-ui",
-	"version": "1.0.26",
+	"version": "1.0.27",
 	"description": "React UI component library built with Tailwind CSS",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
