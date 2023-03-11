@@ -156,3 +156,43 @@ describe('Outline', () => {
 		expect(button).not.toHaveClass(buttonTheme.active.outline)
 	})
 })
+
+describe('Link', () => {
+	it('should contain link bases classes', () => {
+		render(<Button layout="link">Click me</Button>)
+		const button = screen.getByRole('button')
+		expect(button).toHaveClass(buttonTheme.layout.link)
+	})
+	it('should contain link focus classes', () => {
+		render(<Button layout="link">Click me</Button>)
+		const button = screen.getByRole('button')
+		userEvent.tab()
+		expect(button).toHaveClass(
+			'focus-visible:ring focus-visible:ring-primary-shade70/70',
+		)
+	})
+	it('should contain link active classes', () => {
+		render(<Button layout="link">Click me</Button>)
+		const button = screen.getByRole('button')
+		userEvent.click(button)
+		expect(button).toHaveClass('active:bg-transparent  active:text-primary')
+	})
+	it('should contain link disabled classes', () => {
+		render(
+			<Button layout="link" disabled>
+				Click me
+			</Button>,
+		)
+		const button = screen.getByRole('button')
+		expect(button).toHaveClass(buttonTheme.disabled.link)
+	})
+	it('should not contain link active class when disabled', () => {
+		render(
+			<Button layout="link" disabled>
+				Click me
+			</Button>,
+		)
+		const button = screen.getByRole('button')
+		expect(button).not.toHaveClass(buttonTheme.active.link)
+	})
+})

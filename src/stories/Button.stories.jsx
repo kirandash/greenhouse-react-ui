@@ -45,3 +45,14 @@ DisabledOutline.args = {
 	disabled: true,
 	layout: 'outline',
 }
+
+export const Link = Template.bind({})
+Link.args = {
+	layout: 'link',
+}
+
+export const LinkDisabled = Template.bind({})
+LinkDisabled.args = {
+	disabled: true,
+	layout: 'link',
+}

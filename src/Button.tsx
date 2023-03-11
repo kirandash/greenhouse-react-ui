@@ -7,7 +7,7 @@ import { ThemeContext } from './context/ThemeContext'
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	tag?: 'button'
 	size?: 'small' | 'medium' | 'large'
-	layout?: 'primary' | 'outline'
+	layout?: 'primary' | 'outline' | 'link'
 	disabled?: boolean
 	block?: boolean
 	children: React.ReactNode
@@ -28,14 +28,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 	const layoutStyles = {
 		primary: buttonTheme.layout.primary,
 		outline: buttonTheme.layout.outline,
+		link: buttonTheme.layout.link,
 	}
 	const activeStyles = {
 		primary: buttonTheme.active.primary,
 		outline: buttonTheme.active.outline,
+		link: buttonTheme.active.link,
 	}
 	const disabledStyles = {
 		primary: buttonTheme.disabled.primary,
 		outline: buttonTheme.disabled.outline,
+		link: buttonTheme.disabled.link,
 	}
 
 	const {

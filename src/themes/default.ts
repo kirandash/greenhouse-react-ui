@@ -11,16 +11,19 @@ export default {
 		layout: {
 			primary: 'border border-primary bg-primary text-white',
 			outline: 'border border-primary text-primary',
+			link: 'underline text-primary px-0 py-0',
 		},
 		active: {
 			primary:
 				'active:bg-primary-tint20 focus-visible:ring focus-visible:ring-primary-shade70/70',
 			outline:
 				'active:bg-transparent active:text-primary focus-visible:ring focus-visible:ring-primary-shade70/30',
+			link: 'active:bg-transparent active:text-primary focus-visible:ring focus-visible:ring-primary-shade70/70',
 		},
 		disabled: {
 			primary: '!bg-black-20 !border-black-20 cursor-not-allowed',
 			outline: '!border-black-20 !text-black-20 cursor-not-allowed',
+			link: 'cursor-not-allowed !text-black-20',
 		},
 	},
 	helperText: {
