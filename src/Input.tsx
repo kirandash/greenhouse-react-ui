@@ -1,6 +1,16 @@
 import clsx from 'clsx'
-import { forwardRef, InputHTMLAttributes, useContext } from 'react'
+import {
+	forwardRef,
+	InputHTMLAttributes,
+	useContext,
+	useRef,
+	useState,
+} from 'react'
 import { ThemeContext } from './context/ThemeContext'
+import closeIcon from './assets/icons/10x10/close.svg'
+import showIcon from './assets/icons/10x10/show.svg'
+import hideIcon from './assets/icons/10x10/hide.svg'
+import { mergeRefs } from './utils/warning'
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 	type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url'
@@ -13,6 +23,9 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 	const { className, invalid, type = 'text', disabled, ...other } = props
 	const { input } = useContext(ThemeContext)
+	const [value, setValue] = useState('')
+	const [pwdIcon, setPwdIcon] = useState('show')
+	const inputRef = useRef<HTMLInputElement>(null)
 
 	const baseStyle = input.base
 	const invalidStyle = input.invalid
@@ -29,14 +42,46 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 		className,
 	)
 
+	const clearInput = () => {
+		setValue('')
+		inputRef?.current?.focus()
+	}
+
+	const togglePassword = () => {
+		if (inputRef?.current?.type === 'password') {
+			inputRef.current.type = 'text'
+			setPwdIcon('hide')
+		} else if (inputRef?.current?.type === 'text') {
+			inputRef.current.type = 'password'
+			setPwdIcon('show')
+		}
+	}
+
 	return (
-		<input
-			className={cls}
-			type={type}
-			{...other}
-			ref={ref}
-			disabled={disabled}
-		/>
+		<div className="relative">
+			<input
+				className={cls}
+				type={type}
+				{...other}
+				ref={mergeRefs([ref, inputRef])}
+				value={value}
+				disabled={disabled}
+				onChange={e => setValue(e.target.value)}
+			/>
+			{type !== 'password' && !!value && (
+				<button onClick={clearInput} className="absolute top-[18px] right-4">
+					<img src={closeIcon} alt="close" />
+				</button>
+			)}
+			{type === 'password' && !!value && (
+				<button
+					onClick={togglePassword}
+					className="absolute top-[18px] right-4"
+				>
+					<img src={pwdIcon === 'hide' ? hideIcon : showIcon} alt={pwdIcon} />
+				</button>
+			)}
+		</div>
 	)
 })
 

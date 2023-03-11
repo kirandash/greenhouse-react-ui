@@ -36,12 +36,13 @@ describe('Base Button', () => {
 		expect(button).toHaveClass(buttonTheme.block)
 	})
 
-	it('calls a function when clicked', () => {
+	it('calls a function when clicked', async () => {
+		const user = userEvent.setup()
 		const handleClick = jest.fn()
 		// TODO: Check type error for Button
 		render(<Button onClick={handleClick}>Click me</Button>)
 		const button = screen.getByRole('button')
-		userEvent.click(button)
+		await user.click(button)
 		expect(handleClick).toHaveBeenCalledTimes(1)
 	})
 
