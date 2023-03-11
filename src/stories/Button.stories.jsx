@@ -39,3 +39,9 @@ export const Disabled = Template.bind({})
 Disabled.args = {
 	disabled: true,
 }
+
+export const DisabledOutline = Template.bind({})
+DisabledOutline.args = {
+	disabled: true,
+	layout: 'outline',
+}

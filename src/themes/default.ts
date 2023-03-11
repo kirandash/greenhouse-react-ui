@@ -14,13 +14,13 @@ export default {
 		},
 		active: {
 			primary:
-				'active:bg-primary-shade25 hover:bg-primary-shade25 hover:border-primary-shade25 focus:shadow-outline-green',
+				'active:bg-primary-tint20 focus-visible:ring focus-visible:ring-primary-shade70/70',
 			outline:
-				'active:bg-transparent hover:bg-primary-shade70 hover:border-primary-shade70 focus:border-primary-shade70 active:text-primary focus:shadow-outline-green',
+				'active:bg-transparent active:text-primary focus-visible:ring focus-visible:ring-primary-shade70/30',
 		},
 		disabled: {
-			primary: 'opacity-50 cursor-not-allowed',
-			outline: 'opacity-50 cursor-not-allowed bg-gray-300',
+			primary: '!bg-black-20 !border-black-20 cursor-not-allowed',
+			outline: '!border-black-20 !text-black-20 cursor-not-allowed',
 		},
 	},
 	helperText: {
