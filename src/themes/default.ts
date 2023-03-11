@@ -11,7 +11,7 @@ export default {
 		layout: {
 			primary: 'border border-primary bg-primary text-white',
 			outline: 'border border-primary text-primary',
-			link: 'underline text-primary px-0 py-0',
+			link: 'underline text-primary !px-0 !py-0',
 		},
 		active: {
 			primary:
