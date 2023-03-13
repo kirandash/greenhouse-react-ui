@@ -23,7 +23,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 	const { className, invalid, type = 'text', disabled, ...other } = props
 	const { input } = useContext(ThemeContext)
-	const [value, setValue] = useState('')
+	const [value, setValue] = useState(props.value)
 	const [pwdIcon, setPwdIcon] = useState('show')
 	const inputRef = useRef<HTMLInputElement>(null)
 
