@@ -1,15 +1,20 @@
 import clsx from 'clsx'
-import { useContext } from 'react'
+import { HTMLAttributes, useContext } from 'react'
 import { ThemeContext } from './context/ThemeContext'
 import { warn } from './utils/warning'
 
-type HelperTextProps = {
+type HelperTextProps = HTMLAttributes<HTMLSpanElement> & {
 	children: React.ReactNode
 	valid?: boolean
 	className?: string
 }
 
-const HelperText = ({ children, valid, className }: HelperTextProps) => {
+const HelperText = ({
+	children,
+	valid,
+	className,
+	...other
+}: HelperTextProps) => {
 	warn(!children, 'Button', 'you must pass a children to Button')
 
 	const { helperText } = useContext(ThemeContext)
@@ -23,7 +28,11 @@ const HelperText = ({ children, valid, className }: HelperTextProps) => {
 		valid === undefined ? null : valid ? validStyle : invalidStyle,
 		className,
 	)
-	return <span className={cls}>{children}</span>
+	return (
+		<span className={cls} {...other}>
+			{children}
+		</span>
+	)
 }
 
 export default HelperText

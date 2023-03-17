@@ -44,4 +44,9 @@ describe('HelperText', () => {
 		render(<HelperText className="test">HelperText</HelperText>)
 		expect(screen.getByText(/HelperText/)).toHaveClass('test')
 	})
+
+	it('should pass other props', () => {
+		render(<HelperText id="test">HelperText</HelperText>)
+		expect(screen.getByText(/HelperText/)).toHaveAttribute('id', 'test')
+	})
 })
