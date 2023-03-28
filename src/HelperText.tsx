@@ -7,12 +7,14 @@ type HelperTextProps = HTMLAttributes<HTMLSpanElement> & {
 	children: React.ReactNode
 	valid?: boolean
 	className?: string
+	as?: 'ul'
 }
 
 const HelperText = ({
 	children,
 	valid,
 	className,
+	as,
 	...other
 }: HelperTextProps) => {
 	warn(!children, 'Button', 'you must pass a children to Button')
@@ -28,10 +30,11 @@ const HelperText = ({
 		valid === undefined ? null : valid ? validStyle : invalidStyle,
 		className,
 	)
+	const AS = as || 'span'
 	return (
-		<span className={cls} {...other}>
+		<AS className={cls} {...other}>
 			{children}
-		</span>
+		</AS>
 	)
 }
 

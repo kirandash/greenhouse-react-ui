@@ -49,4 +49,16 @@ describe('HelperText', () => {
 		render(<HelperText id="test">HelperText</HelperText>)
 		expect(screen.getByText(/HelperText/)).toHaveAttribute('id', 'test')
 	})
+
+	it('should render as ul', () => {
+		render(
+			<HelperText as="ul">
+				<li>HelperText</li>
+				<li>HelperText</li>
+				<li>HelperText</li>
+			</HelperText>,
+		)
+		expect(screen.getByRole('list')).toHaveClass(defaultTheme.helperText.base)
+		expect(screen.getAllByRole('listitem')).toHaveLength(3)
+	})
 })

@@ -24,3 +24,16 @@ export const Invalid = Template.bind({})
 Invalid.args = {
 	valid: false,
 }
+
+const Template2 = args => (
+	<HelperText {...args}>
+		<li>HelperText</li>
+		<li>HelperText</li>
+		<li>HelperText</li>
+	</HelperText>
+)
+export const ListOfHelperTexts = Template2.bind({})
+ListOfHelperTexts.args = {
+	valid: false,
+	as: 'ul',
+}
