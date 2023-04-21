@@ -19,7 +19,6 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 	disabled?: boolean
 }
 
-// TODO: Add Clear Button and Password Toggle
 const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 	const { className, invalid, type = 'text', disabled, ...other } = props
 	const { input } = useContext(ThemeContext)
