@@ -43,7 +43,7 @@ WORKDIR /myapp
 COPY --from=production-deps /myapp/node_modules /myapp/node_modules
 
 COPY --from=build /myapp/storybook-static /myapp/storybook-static
-COPY --from=build /myapp/public /myapp/public
+COPY --from=build /myapp/style /myapp/style
 COPY --from=build /myapp/package.json /myapp/package.json
 
 ENTRYPOINT [ "./storybook-static/index.html" ]
