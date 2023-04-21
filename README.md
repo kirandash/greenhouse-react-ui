@@ -76,7 +76,6 @@ export default App
 
 It will start a local server at `localhost:6006` with all components rendered.
 
-`git commit` will guide you through some short questions and guarantee that you
-commit message is standardized. Also it will trigger a lint check
+`git commit` to commit your changes
 
 `git push` will trigger prettier format check, linting, audit and build.

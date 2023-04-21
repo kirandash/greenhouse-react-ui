@@ -8,3 +8,4 @@ storybook-static
 .vscode/
 
 .DS_Store
+build-storybook.log
