@@ -26,7 +26,7 @@ jobs:
           node-version: 18.16.0
 
       - name: 📥 Download deps
-        run: run: npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps
 
       - name: 🔬 Lint
         run: npm run lint
@@ -47,7 +47,7 @@ jobs:
           node-version: 18.16.0
 
       - name: 📥 Download deps
-        run: run: npm i --legacy-peer-deps
+        run: npm i --legacy-peer-deps
 
       - name: ⚡ Run RTL
         run: npm run test -- --coverage
