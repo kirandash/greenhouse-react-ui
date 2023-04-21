@@ -1,0 +1,15 @@
+# flyctl launch added from .gitignore
+**/node_modules
+**/dist
+**/style/output.css
+
+**/coverage
+**/storybook-static
+
+**/.vscode
+
+**/.DS_Store
+
+# flyctl launch added from .husky/_/.gitignore
+.husky/_/**/*
+fly.toml

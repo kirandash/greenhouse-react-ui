@@ -5,9 +5,9 @@ name: Build
 
 on:
   push:
-    branches: [main]
+    branches: [build/deploy-to-fly]
   pull_request:
-    branches: [main]
+    branches: [build/deploy-to-fly]
 
 jobs:
   build:
