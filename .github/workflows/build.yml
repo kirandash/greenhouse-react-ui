@@ -6,8 +6,6 @@ name: Build
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build:
@@ -15,6 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.1
       - run: npm install --legacy-peer-deps
       # - run: npm run lint
       - run: npm run test:coverage
@@ -25,3 +28,10 @@ jobs:
           file: ./coverage/coverage-final.json
           flags: unittest
           name: codecov-1
+      - run: npm run build:tailwind
+      - uses: chromaui/action@v1
+        # Options required for Chromatic's GitHub Action
+        with:
+          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
