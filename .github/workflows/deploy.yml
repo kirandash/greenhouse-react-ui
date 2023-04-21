@@ -2,7 +2,7 @@ name: 🚀 Deploy
 on:
   push:
     branches:
-      - build/deploy-to-fly
+      - deployfly
   pull_request: {}
 
 permissions:
@@ -63,7 +63,7 @@ jobs:
     name: 🐳 Build
     # only build/deploy main branch on pushes
     if:
-      ${{ (github.ref == 'refs/heads/build/deploy-to-fly') &&
+      ${{ (github.ref == 'refs/heads/deployfly') &&
       github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
@@ -128,7 +128,7 @@ jobs:
     needs: [lint, rtltest, build]
     # only build/deploy main branch on pushes
     if:
-      ${{ (github.ref == 'refs/heads/build/deploy-to-fly') &&
+      ${{ (github.ref == 'refs/heads/deployfly') &&
       github.event_name == 'push' }}
 
     steps:
@@ -146,7 +146,7 @@ jobs:
           field: 'app'
 
       - name: 🚀 Deploy Staging
-        if: ${{ github.ref == 'refs/heads/build/deploy-to-fly' }}
+        if: ${{ github.ref == 'refs/heads/deployfly' }}
         uses: superfly/flyctl-actions@1.3
         with:
           args:
@@ -157,7 +157,7 @@ jobs:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
       - name: 🚀 Deploy Production
-        if: ${{ github.ref == 'refs/heads/build/deploy-to-fly' }}
+        if: ${{ github.ref == 'refs/heads/deployfly' }}
         uses: superfly/flyctl-actions@1.3
         with:
           args:
