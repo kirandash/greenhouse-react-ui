@@ -28,14 +28,9 @@ FROM base as build
 WORKDIR /myapp
 
 COPY --from=deps /myapp/node_modules /myapp/node_modules
-COPY --from=deps /myapp/.storybook /myapp/.storybook
-
 
 ADD . .
 RUN npm run build:tailwind
-
-COPY --from=deps /myapp/style /myapp/style
-
 RUN npm run build-storybook
 
 # Finally, build the production image with minimal footprint
@@ -43,6 +38,7 @@ FROM base
 
 WORKDIR /myapp
 
+COPY --from=build /myapp/style /myapp/style
 COPY --from=build /myapp/storybook-static /myapp/storybook-static
 
 ENTRYPOINT [ "./storybook-static/index.html" ]
