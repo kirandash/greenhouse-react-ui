@@ -15,8 +15,10 @@ jobs:
           username: x
           password: ${{ secrets.FLY_API_TOKEN }}
 
-      - name: 🚀 Deploy Production
+      - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
+
+      - name: 🚀 Deploy Production
         uses: superfly/flyctl-actions/setup-flyctl@master
         run: flyctl deploy --remote-only
         env:
