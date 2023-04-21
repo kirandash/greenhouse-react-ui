@@ -26,9 +26,7 @@ jobs:
           node-version: 16.15.1
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: true
+        run: npm install --legacy-peer-deps
 
       - name: 🔬 Lint
         run: npm run lint
@@ -49,9 +47,7 @@ jobs:
           node-version: 16.15.1
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: true
+        run: npm i --legacy-peer-deps
 
       - name: ⚡ Run RTL
         run: npm run test -- --coverage
