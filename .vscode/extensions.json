@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-rename-tag",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"shd101wyy.markdown-preview-enhanced",
+		"SonarSource.sonarlint-vscode"
+	]
+}

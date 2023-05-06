@@ -1,0 +1,78 @@
+{
+	"editor.fontFamily": "Cascadia Code",
+	"editor.fontLigatures": true,
+	"git.enableSmartCommit": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"workbench.iconTheme": "material-icon-theme",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"explorer.confirmDragAndDrop": false,
+	"sonarlint.rules": {
+		"typescript:S2819": {
+			"level": "off"
+		}
+	},
+	"sonarlint.analyzerProperties": {},
+	"files.autoSave": "afterDelay",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": false,
+	"editor.tabSize": 2,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"files.eol": "\n",
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"diffEditor.wordWrap": "on",
+	"editor.wordWrap": "on",
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true
+	},
+	"editor.smoothScrolling": true,
+	"terminal.integrated.smoothScrolling": true,
+	"editor.fontSize": 16,
+	"editor.cursorSmoothCaretAnimation": true,
+	"git.showPushSuccessNotification": true,
+	"editor.minimap.autohide": true,
+	"workbench.list.smoothScrolling": true,
+	"editor.detectIndentation": true,
+	"editor.rulers": [80],
+	"editor.snippetSuggestions": "top",
+	"editor.wordBasedSuggestions": false,
+	"editor.suggest.localityBonus": true,
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.suggestSelection": "recentlyUsed",
+		"editor.suggest.showKeywords": false
+	},
+	"editor.renderWhitespace": "boundary",
+	"files.defaultLanguage": "{activeEditorLanguage}",
+	"javascript.validate.enable": false,
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/charting_library": true,
+		"public/datafeeds": true,
+		"**/bower_components": true,
+		"**/coverage": true,
+		"**/dist": true,
+		"**/build": true,
+		"**/.build": true,
+		"**/.gh-pages": true
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": false
+	},
+	"workbench.editorAssociations": {
+		"*.md": "vscode.markdown.preview.editor"
+	},
+	"breadcrumbs.enabled": true,
+	"grunt.autoDetect": "off",
+	"gulp.autoDetect": "off",
+	"npm.runSilent": true,
+	"php.suggest.basic": false,
+	"workbench.colorTheme": "Night Owl (No Italics)"
+}

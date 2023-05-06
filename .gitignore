@@ -5,7 +5,7 @@ style/output.css
 coverage
 storybook-static
 
-.vscode/
+.vscode/settings.json
 
 .DS_Store
 build-storybook.log
