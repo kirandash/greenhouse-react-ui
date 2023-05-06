@@ -10,7 +10,7 @@ you build awesome react projects.
   <a href="https://github.com/kirandash/greenhouse-react-ui/blob/master/LICENSE"><img src="https://img.shields.io/github/license/kirandash/greenhouse-react-ui" alt="MIT License" /></a>
 </p>
 
-## Mission
+## 🎯 Mission
 
 Build a light weight accessible component library ready to be used out of the
 box for building your next awesome react project.
@@ -79,3 +79,8 @@ It will start a local server at `localhost:6006` with all components rendered.
 `git commit` to commit your changes
 
 `git push` will trigger prettier format check, linting, audit and build.
+
+
+## 🙏 Support
+
+Don't forget to leave a star ⭐️
