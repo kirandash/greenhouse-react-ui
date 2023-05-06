@@ -45,4 +45,9 @@ export default {
 		success: 'bg-primary-tint40',
 		error: 'bg-red',
 	},
+	textarea: {
+		base: 'block w-full text-xs px-3 py-3.5 focus:outline-none rounded border border-black-20 text-black-80 font-semibold tracking-wide placeholder:text-black-70 placeholder:font-normal',
+		disabled: 'cursor-not-allowed opacity-50 bg-black-10',
+		invalid: 'border-red',
+	},
 }

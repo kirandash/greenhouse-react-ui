@@ -1,47 +1,34 @@
 import React from 'react'
-import Input from '../Input'
-import TextArea from '../TextArea'
 
-import Label from '../Label'
+import TextArea from '../TextArea'
 
 // TODO: Convert to TypeScript
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Components/Label',
-	component: Label,
+	title: 'Components/TextArea',
+	component: TextArea,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
 }
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = args => <Label {...args}>Form Label here</Label>
+const Template = args => <TextArea {...args} />
 
 export const Base = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Base.args = {
 	className: 'test-class-name',
+	placeholder: 'Enter text',
 }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
 	disabled: true,
+	placeholder: 'Enter text',
 }
 
-const Template2 = args => (
-	<Label {...args}>
-		Form label here
-		<Input />
-	</Label>
-)
-export const LabelWithInput = Template2.bind({})
-LabelWithInput.args = {}
-
-const Template3 = args => (
-	<Label {...args}>
-		Form label here
-		<TextArea />
-	</Label>
-)
-
-export const LabelWithTextarea = Template3.bind({})
-LabelWithTextarea.args = {}
+export const Invalid = Template.bind({})
+Invalid.args = {
+	invalid: true,
+	placeholder: 'Enter text',
+}
