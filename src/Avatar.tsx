@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import { warn } from './utils/warning'
 import { ThemeContext } from './context/ThemeContext'
 
-// TODO: Tag validation - button, anchor
 type AvatarProps = ImgHTMLAttributes<HTMLImageElement> & {
 	size?: 'large' | 'regular' | 'small'
 	src: string
