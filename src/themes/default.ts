@@ -50,4 +50,12 @@ export default {
 		disabled: 'cursor-not-allowed opacity-50 bg-black-10',
 		invalid: 'border-red',
 	},
+	avatar: {
+		base: 'rounded-full',
+		size: {
+			large: 'w-10 h-10',
+			regular: 'w-8 h-8',
+			small: 'w-6 h-6',
+		},
+	},
 }
