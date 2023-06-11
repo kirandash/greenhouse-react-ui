@@ -8,7 +8,6 @@ import {
 } from 'react'
 import { ThemeContext } from './context/ThemeContext'
 import { mergeRefs } from './utils/warning'
-import Label from './Label'
 
 type TextareaProps = InputHTMLAttributes<HTMLTextAreaElement> & {
 	invalid?: boolean
