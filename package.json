@@ -28,7 +28,8 @@
 		"format": "npm run prettier -- --write",
 		"check-format": "npm run prettier -- --list-different",
 		"audit": "npm audit --audit-level=high --omit=dev",
-		"validate": "npm-run-all check-format lint audit build-lib"
+		"validate": "npm-run-all check-format lint audit build-lib",
+		"prepack": "node ./node_modules/.bin/clean-package-dot-json"
 	},
 	"repository": {
 		"type": "git",
