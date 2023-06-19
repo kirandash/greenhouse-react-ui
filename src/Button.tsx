@@ -4,7 +4,7 @@ import { warn } from './utils/warning'
 import { ThemeContext } from './context/ThemeContext'
 
 // TODO: Tag validation - button, anchor
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	tag?: 'button'
 	size?: 'small' | 'medium' | 'large'
 	layout?: 'primary' | 'outline' | 'link'
