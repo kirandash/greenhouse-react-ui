@@ -83,4 +83,4 @@ It will start a local server at `localhost:6006` with all components rendered.
 
 ## 🙏 Support
 
-Don't forget to leave a star ⭐️
+Please ⭐️ star this project and share it with others to show your support. [Follow me](https://github.com/kirandash) ❤️ for updates on future projects and tutorials!
