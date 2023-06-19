@@ -9,7 +9,7 @@ import {
 import { ThemeContext } from './context/ThemeContext'
 import { mergeRefs } from './utils/warning'
 
-type TextareaProps = InputHTMLAttributes<HTMLTextAreaElement> & {
+export type TextareaProps = InputHTMLAttributes<HTMLTextAreaElement> & {
 	invalid?: boolean
 	className?: string
 	disabled?: boolean

@@ -9,3 +9,4 @@ export { default as Avatar } from './Avatar'
 
 // types
 export type { ButtonProps } from './Button'
+export type { TextareaProps } from './TextArea'
