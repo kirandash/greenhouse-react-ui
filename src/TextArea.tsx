@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import {
 	forwardRef,
-	InputHTMLAttributes,
+	TextareaHTMLAttributes,
 	useContext,
 	useRef,
 	useState,
@@ -9,7 +9,7 @@ import {
 import { ThemeContext } from './context/ThemeContext'
 import { mergeRefs } from './utils/warning'
 
-export type TextareaProps = InputHTMLAttributes<HTMLTextAreaElement> & {
+export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
 	invalid?: boolean
 	className?: string
 	disabled?: boolean
