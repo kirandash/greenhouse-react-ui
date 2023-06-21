@@ -95,7 +95,7 @@ describe('Primary', () => {
 		render(<Button layout="primary">Click me</Button>)
 		const button = screen.getByRole('button')
 		userEvent.click(button)
-		expect(button).toHaveClass('active:bg-primary-tint20')
+		expect(button).toHaveClass('active:bg-primary-tint50')
 	})
 	it('should contain primary disabled classes', () => {
 		render(
