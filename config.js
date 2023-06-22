@@ -18,7 +18,6 @@ const colors = {
 		tint40: '#498D29',
 		tint50: '#238636',
 	},
-	red: '#D53232',
 	black: {
 		10: '#E7E7E7',
 		20: '#CFCFCF',

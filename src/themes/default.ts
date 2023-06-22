@@ -29,12 +29,12 @@ export default {
 	helperText: {
 		base: 'text-xs tracking-wide font-normal block',
 		valid: 'hidden',
-		invalid: 'text-red',
+		invalid: 'text-red-600',
 	},
 	input: {
 		base: 'block w-full text-xs px-3 py-3.5 focus:outline-none rounded border border-black-20 text-black-80 font-semibold tracking-wide placeholder:text-black-70 placeholder:font-normal',
 		disabled: 'cursor-not-allowed opacity-50 bg-black-10',
-		invalid: 'border-red',
+		invalid: 'border-red-600',
 	},
 	label: {
 		base: 'block text-xs font-medium tracking-wide text-black-80',
@@ -43,12 +43,12 @@ export default {
 	alert: {
 		base: 'p-[18px] pl-5 text-white text-sm rounded-lg leading-5 max-w-[343px] flex gap-2.5',
 		success: 'bg-primary-tint40',
-		error: 'bg-red',
+		error: 'bg-red-600',
 	},
 	textarea: {
 		base: 'block w-full text-xs px-3 py-3.5 focus:outline-none rounded border border-black-20 text-black-80 font-semibold tracking-wide placeholder:text-black-70 placeholder:font-normal',
 		disabled: 'cursor-not-allowed opacity-50 bg-black-10',
-		invalid: 'border-red',
+		invalid: 'border-red-600',
 	},
 	avatar: {
 		base: 'rounded-full',
