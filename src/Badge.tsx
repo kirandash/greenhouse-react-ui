@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { warn } from './utils/warning'
 import { ThemeContext } from './context/ThemeContext'
 
-type BadgeProps = HTMLAttributes<HTMLSpanElement> & { 
+export type BadgeProps = HTMLAttributes<HTMLSpanElement> & { 
     children: React.ReactNode,
     className?: string
     color?: 'neutral' | 'success' | 'danger' | 'warning'
@@ -32,6 +32,7 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
     
     const cls = clsx(
 		baseStyle,
+        className,
         layoutStyles[color]
 	)
     
