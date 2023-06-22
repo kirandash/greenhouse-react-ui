@@ -58,4 +58,12 @@ export default {
 			small: 'w-6 h-6',
 		},
 	},
+	badge: {
+		base: 'inline-flex px-2 text-xs font-medium leading-5 rounded-full',
+		neutral: 'text-gray-700 bg-gray-100 dark:text-gray-100 dark:bg-gray-700',
+		success:
+			'text-primary-tint40 bg-primary-shade60 dark:bg-primary-tint40 dark:text-primary-shade60',
+		danger: 'text-red-700 bg-red-100 dark:text-red-100 dark:bg-red-700',
+		warning: 'text-orange-700 bg-orange-100 dark:text-white dark:bg-orange-600',
+	},
 }
