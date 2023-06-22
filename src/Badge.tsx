@@ -3,44 +3,35 @@ import clsx from 'clsx'
 import { warn } from './utils/warning'
 import { ThemeContext } from './context/ThemeContext'
 
-export type BadgeProps = HTMLAttributes<HTMLSpanElement> & { 
-    children: React.ReactNode,
-    className?: string
-    color?: 'neutral' | 'success' | 'danger' | 'warning'
+export type BadgeProps = HTMLAttributes<HTMLSpanElement> & {
+	children: React.ReactNode
+	className?: string
+	color?: 'neutral' | 'success' | 'danger' | 'warning'
 }
 
 const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
-    const theme = React.useContext(ThemeContext)
-    const { badge: badgeTheme } = theme
+	const theme = React.useContext(ThemeContext)
+	const { badge: badgeTheme } = theme
 
-    const baseStyle = badgeTheme.base
-    const layoutStyles = {
+	const baseStyle = badgeTheme.base
+	const layoutStyles = {
 		neutral: badgeTheme.neutral,
 		success: badgeTheme.success,
-        danger: badgeTheme.danger,
-        warning: badgeTheme.warning
+		danger: badgeTheme.danger,
+		warning: badgeTheme.warning,
 	}
 
-    const {
-        children,
-        className,
-        color = 'neutral',
-        ...other
-    } = props
+	const { children, className, color = 'neutral', ...other } = props
 
-    warn(!children, 'Badge', 'you must pass a children to the Badge component')
-    
-    const cls = clsx(
-		baseStyle,
-        className,
-        layoutStyles[color]
+	warn(!children, 'Badge', 'you must pass a children to the Badge component')
+
+	const cls = clsx(baseStyle, className, layoutStyles[color])
+
+	return (
+		<span ref={ref} className={cls} {...other}>
+			{children}
+		</span>
 	)
-    
-    return (
-        <span ref={ref} className={cls} {...other}>
-            {children}
-        </span>
-    )
 })
 
 export default Badge
